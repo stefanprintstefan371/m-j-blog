@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Projekty</h1>
+<div class="row">
+{% for project in projects %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static project.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <a href="{% url 'project_detail' project.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+ <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="#" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                     <strong> <p><span class="title-s">Name: </span> <span>Štefan Jančár</span></p></strong>
+                      <strong><p><span class="title-s">Profile: </span> <span>samouk developer</span></p></strong>
+                      <strong><p><span class="title-s">Email: </span> <span>mail@python3.sk</span></p></strong>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skill</p>
+                  <span>HTML</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>CSS3</span> <span class="pull-right">75%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>FLASK</span> <span class="pull-right">75%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>PYTHON</span> <span class="pull-right">65%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      O mne
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Medzi moje najväčšie koníčky a záľuby patrí hlavne programovanie cez ktoré sa dokážem preniesť do sveta logiky a virtualnej reality kde ma nesmierne baví tvoriť transformovať a vytvárať. Momentálne sa venujem hlavne tvorbe webových aplikácií, konkrétne v jazyku PYTHON-FLASK-DJANGO-NODE-HTML-CSS-JAVASCRIPT-BLENDER-ADOBE PHOTSHOP-GIMP...
+
+
+                  </p>
+                  <p class="lead">
+                    Baví ma kreslenie, varenie, čítanie kníh, učenie sa nových vecí, jazdenie autom, počúvanie dobrej hudby, prechádzky prírodou, cestovanie, pozeranie filmov.
+                  </p>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
