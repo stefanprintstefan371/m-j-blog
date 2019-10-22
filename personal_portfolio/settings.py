@@ -25,7 +25,7 @@ SECRET_KEY = 'hrzx4o7j)4zh+a(v2z$p-38jvunis_38fitwahm6nc7+v=@-)w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'personal_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ "personal_portfolio/templates/"],
+        'DIRS': [ 'personal_portfolio/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,4 +120,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/css/img/js/lib/'
+STATIC_URL = '/static/'
